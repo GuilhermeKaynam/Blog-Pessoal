@@ -43,6 +43,18 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Postagens> postagem;
 
+	public Usuario(long id, String nome, String usuario, String senha, String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+	
+	public Usuario() {
+		
+	}
+
 	public long getId() {
 		return id;
 	}
