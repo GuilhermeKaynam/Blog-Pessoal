@@ -24,14 +24,14 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
-	@NotNull(message = "O atributo Nome é Obrigatorio")
+	@NotNull(message = "O Atributo Nome é Obrigatório!")
 	private String nome;
 
 	@Schema(example = "email@email.com.br")
-	@NotNull(message = "O atributo Usuário é Obrigatorio")
-	@Email(message = "O Atributo Usuário deve ser um email válido")
+	@NotNull(message = "O Atributo Usuário é Obrigatório!")
+	@Email(message = "O Atributo Usuário deve ser um email válido!")
 	private String usuario;
 
 	@NotBlank(message = "O Atributo Senha é Obrigatório!")
@@ -45,7 +45,8 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Postagens> postagem;
 
-	public Usuario(long id, String nome, String usuario, String senha, String foto) {
+	public Usuario(Long id, String nome, String usuario, String senha, String foto) {
+
 		this.id = id;
 		this.nome = nome;
 		this.usuario = usuario;
@@ -57,11 +58,11 @@ public class Usuario {
 
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
